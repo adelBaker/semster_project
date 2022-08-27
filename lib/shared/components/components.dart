@@ -10,6 +10,33 @@ void navigateTo(context,Widget) =>Navigator.push(context,
 );
 
 
+Widget defaultButton ({
+  double width=double.infinity,
+  Color background=Colors.green,
+  bool isUpperCase=true,
+  double radius= 0,
+  required String text,
+  required Null Function() function,
+
+}) =>  Container(
+  width: width,
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(radius,),
+    color: background,
+  ),
+  child: MaterialButton(
+    onPressed: function,
+    child:  Text(
+      isUpperCase? text.toUpperCase():text,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
+    ),
+  ),
+);
+
+
+
 Widget defaultFormField(
     {
       bool isPassword = false,

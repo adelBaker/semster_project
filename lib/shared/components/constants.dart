@@ -13,5 +13,14 @@ List <String> pics=[
 
 
 List <String> ads=[
-  "Z",
+  "Mongo",
+    "Dior",
+  "RedTag",
 ];
+
+
+var adDetails ={
+};
+
+
+
