@@ -8,8 +8,10 @@ List <String> pics=[
   'assets/images/furniture.png',
   'assets/images/money.png',
   'assets/images/pills.png',
+
 ];
 
 
 List <String> ads=[
+  "Z",
 ];
