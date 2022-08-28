@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:semester_project/modules/charity_ads/charity_ads_screen.dart';
 import 'package:semester_project/shared/components/constants.dart';
 
 void navigateTo(context,Widget) =>Navigator.push(context,
@@ -90,7 +91,8 @@ Widget buildSeparator() => Container(
   color: Colors.grey[300],
 );
 
-Widget buildCharityAdItem()=>
+Widget buildCharityAdItem(
+    )=>
     Container(
       height: 233,
 
@@ -98,7 +100,9 @@ Widget buildCharityAdItem()=>
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext context, int index) => InkWell(
-          onTap: (){print("ASD");},
+          onTap: (){
+            navigateTo(context, const CharityAdsScreen());
+          },
 
           child: Padding(
 

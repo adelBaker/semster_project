@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../modules/charity_ads/charity_ads_screen.dart';
 import '../../shared/components/components.dart';
 
 class HomeLayout extends StatelessWidget {
@@ -49,7 +50,8 @@ class HomeLayout extends StatelessWidget {
               ),
             ),
           ),
-          buildCharityAdItem(),
+          buildCharityAdItem(
+          ),
           buildSeparator(),
           const Padding(
             padding: EdgeInsets.all(15.0),

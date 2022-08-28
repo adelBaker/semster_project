@@ -31,6 +31,7 @@ class CharityAdsScreen extends StatelessWidget {
               const Text("Association name: Mongo",
                 style: TextStyle(
                   fontSize: 25,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
 
@@ -38,7 +39,9 @@ class CharityAdsScreen extends StatelessWidget {
 
               const Text(  "Details: I need clothes",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+
                 ),
               ),
               const SizedBox(height: 8,),
@@ -46,7 +49,9 @@ class CharityAdsScreen extends StatelessWidget {
 
               const Text("Address: Deir Atiyah",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+
                 ),
               ),
               const SizedBox(height: 8,),
@@ -54,7 +59,9 @@ class CharityAdsScreen extends StatelessWidget {
 
               const Text("Number: 0987654321",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+
                 ),
               ),
               const SizedBox(height: 8,),
@@ -63,7 +70,9 @@ class CharityAdsScreen extends StatelessWidget {
 
               const Text('Working: hours: 8-3',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+
                 ),
               ),
               const SizedBox(height: 8,),
@@ -71,7 +80,9 @@ class CharityAdsScreen extends StatelessWidget {
 
               const Text('Opening days: Sunday',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+
                 ),
               ),
               const SizedBox(height: 55,),
