@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:semester_project/layout/charity_app/cubit/cubit.dart';
+import 'package:semester_project/layout/charity_app/cubit/states.dart';
 
 import '../../modules/charity_ads/charity_ads_screen.dart';
 import '../../shared/components/components.dart';
@@ -6,69 +9,69 @@ import '../../shared/components/components.dart';
 class HomeLayout extends StatelessWidget {
 
   HomeLayout({Key? key}) : super(key: key);
-  static const _kFontFam = 'MyFlutterApp';
-  static const String? _kFontPkg = null;
+
 
     var searchController=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions:  [
-          IconButton(
-            onPressed: (){
-              //AppCubit.get(context).changeAppMode();
+    return BlocConsumer<AppCubit,AppStates>(
+      listener: (context,state){},
+      builder: (BuildContext context, state) {
+
+            var cubit=AppCubit.get(context);
+        return Scaffold(
+
+          body: cubit.screens[cubit.currentIndex],
+          bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Colors.white,
+            unselectedItemColor: Colors.grey,
+            selectedItemColor: Colors.deepOrange,
+
+            currentIndex: cubit.currentIndex,
+            onTap: (index){
+              cubit.changeBottomNavBar(index);
             },
-            icon: const Icon(Icons.add,),
-          ),
-          SizedBox(width: 20.0),
-        ],
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.business_outlined,
+                ),
+                label: "Charities",
 
-        children:  [
-
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: defaultFormField(
-                controller: searchController,
-                type: TextInputType.text,
-                label: "search",
-                prefix: Icons.search,
-                onSubmit: (value){},
-                validate: (value){},
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(15.0),
-            child: Text(
-              "CharityAd's",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
               ),
-            ),
-          ),
-          buildCharityAdItem(
-          ),
-          buildSeparator(),
-          const Padding(
-            padding: EdgeInsets.all(15.0),
-            child: Text(
-              "Category To donations",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
+
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home,
+                ),
+                label: "Home",
+
               ),
-            ),
+
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.account_balance_wallet_outlined,
+                ),
+                label: "Donations",
+
+              ),
+
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.person,
+                ),
+                label: "My Account",
+
+              ),
+
+            ],
+
           ),
-          buildCategoryItem(),
 
-
-        ],
-      ),
-
-      );
+        );
+      },
+    );
   }
 }

@@ -161,7 +161,7 @@ Widget buildCharityAdItem(
 
 Widget buildCategoryItem()=>
     Container(
-      height: 233,
+      height: 161,
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
