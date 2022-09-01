@@ -28,13 +28,6 @@ class AppCubit extends Cubit<AppStates>
   void changeBottomNavBar(int index)
   {
     currentIndex=index;
-    if(index==1)
-      {}
-    else if(index==2)
-      {}
-    else if(index==3)
-    {}
-
     emit(AppChangeBottomNavBarState());
 
   }
