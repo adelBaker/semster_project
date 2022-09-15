@@ -5,6 +5,7 @@ import 'package:semester_project/layout/charity_app/cubit/cubit.dart';
 import 'package:semester_project/layout/charity_app/cubit/states.dart';
 import 'package:semester_project/modules/charity_ads/charity_ads_screen.dart';
 import 'package:semester_project/modules/my_account/my_account_screen.dart';
+import 'package:sizer/sizer.dart';
 
 import 'bloc_observer.dart';
 import 'layout/charity_app/home_layout.dart';
@@ -33,12 +34,18 @@ class MyApp extends StatelessWidget {
       child: BlocConsumer<AppCubit,AppStates>(
         listener: (context,state){},
         builder: (context,state){
-          return  MaterialApp(
-            debugShowCheckedModeBanner:false ,
-            home: HomeLayout(),
+          return Sizer(
+              builder: (context, orientation, deviceType) {
+                return MaterialApp(
+                  debugShowCheckedModeBanner: false,
+                  home: HomeLayout(),
+                );
+              }
           );
         },
       ),
     );
   }
 }
+
+

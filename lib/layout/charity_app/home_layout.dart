@@ -38,15 +38,16 @@ class HomeLayout extends StatelessWidget {
                 icon: Icon(
                   Icons.business_outlined,
                 ),
-                label: "Charities",
+                label: "الجمعيات الخيرية",
 
               ),
 
               BottomNavigationBarItem(
+
                 icon: Icon(
                   Icons.home,
                 ),
-                label: "Home",
+                label: "الرئيسية",
 
               ),
 
@@ -54,7 +55,7 @@ class HomeLayout extends StatelessWidget {
                 icon: Icon(
                   Icons.account_balance_wallet_outlined,
                 ),
-                label: "Donations",
+                label: "تبرعاتي",
 
               ),
 
@@ -62,7 +63,7 @@ class HomeLayout extends StatelessWidget {
                 icon: Icon(
                   Icons.person,
                 ),
-                label: "My Account",
+                label: "حسابي",
 
               ),
 

@@ -13,7 +13,7 @@ void navigateTo(context,Widget) =>Navigator.push(context,
 
 Widget defaultButton ({
   double width=double.infinity,
-  Color background=Colors.green,
+  Color background=Colors.deepOrange,
   bool isUpperCase=true,
   double radius= 0,
   required String text,
@@ -59,7 +59,7 @@ Widget defaultFormField(
       bool isClickable = true ,
 
     })=>TextFormField(
-
+  textDirection: TextDirection.rtl,
   enabled: isClickable,
   obscureText: isPassword,
   controller:controller ,
@@ -71,8 +71,10 @@ Widget defaultFormField(
   decoration:  InputDecoration(
     labelText: label,
     border: const OutlineInputBorder(),
+
     prefixIcon: Icon(
       prefix,
+      color: Colors.deepOrange,
     ),
     suffixIcon: suffix != null? IconButton(
       onPressed: suffixPressed,
@@ -94,9 +96,11 @@ Widget buildSeparator() => Container(
 Widget buildCharityAdItem(
     )=>
     Container(
+
       height: 233,
 
       child: ListView.builder(
+
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext context, int index) => InkWell(
@@ -108,7 +112,6 @@ Widget buildCharityAdItem(
 
             padding: const EdgeInsets.all(15.0),
             child: Row(
-
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,7 +133,7 @@ Widget buildCharityAdItem(
                     const SizedBox(
                       height: 8,
                     ),
-                    const Text("Name of the charity",
+                    const Text("اسم الجمعية الخيرية",
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold
@@ -139,7 +142,7 @@ Widget buildCharityAdItem(
                     const SizedBox(
                       height: 8,
                     ),
-                    const Text("Ad's of the charity's",
+                    const Text("اعلان الجمعية الخيرية",
                       style: TextStyle(
                         fontSize: 15,
                       ),
@@ -176,7 +179,7 @@ Widget buildCategoryItem()=>
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children:[
@@ -194,14 +197,21 @@ Widget buildCategoryItem()=>
                       ),
                     ),
                     const SizedBox(
-                      height: 8,
+                      height: 5,
                     ),
-                     Text(pics[index].toString().substring(14,pics[index].toString().length-4),
+                    Text(donation[index].toString(),
                       style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold
                       ),
                     ),
+
+                    // Text(pics[index].toString().substring(14,pics[index].toString().length-4),
+                    //   style: const TextStyle(
+                    //       fontSize: 16,
+                    //       fontWeight: FontWeight.bold
+                    //   ),
+                    // )
                     const SizedBox(
                       height: 8,
                     ),

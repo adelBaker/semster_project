@@ -10,6 +10,17 @@ List <String> pics=[
   'assets/images/pills.png',
 
 ];
+List <String> donation=[
+  'اي شيء',
+  'قرطاسية',
+  'ملابس',
+  'طعام',
+  'اثاث',
+  'مال',
+  'ادوية',
+  '',
+];
+
 
 
 List <String> ads=[

@@ -22,7 +22,7 @@ class NotificationSettingsScreen extends StatelessWidget {
           ),
         ),
         elevation: 0,
-        title: const Text("Notification setting",
+        title: const Text("اعدادات الاشعارات",
           style: TextStyle(
             color: Colors.black
           ),
@@ -44,10 +44,10 @@ class NotificationSettingsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children:  [
                   SizedBox(width: 48),
-                  Expanded(
+                  const Expanded(
                     child: Center(
                       child: Text(
-                        "Enable/Disable",
+                        "تفعيل/عدم التفعيل",
                       ),
                     ),
                   ),
@@ -77,7 +77,7 @@ class NotificationSettingsScreen extends StatelessWidget {
                   Expanded(
                     child: Center(
                       child: Text(
-                        "notification ringtone",
+                        "نغمة الاشعارات",
                       ),
                     ),
                   ),
@@ -109,7 +109,7 @@ class NotificationSettingsScreen extends StatelessWidget {
                   Expanded(
                     child: Center(
                       child: Text(
-                        "Customize notifications",
+                        "تخصيص الاشعارات",
                       ),
                     ),
                   ),

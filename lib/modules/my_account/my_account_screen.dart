@@ -13,7 +13,7 @@ class MyAccountScreen extends StatelessWidget {
 
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text("My account screen",
+        title: const Text(" حسابي",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -28,6 +28,7 @@ class MyAccountScreen extends StatelessWidget {
         ],
       ),
       body: Column(
+        textDirection: TextDirection.rtl,
         children: [
           SizedBox(height: 40,),
           InkWell(
@@ -45,7 +46,7 @@ class MyAccountScreen extends StatelessWidget {
             Expanded(
               child: Center(
                 child: Text(
-                  "Language",
+                  "اللغة",
                 ),
               ),
             ),
@@ -78,7 +79,7 @@ class MyAccountScreen extends StatelessWidget {
                   Expanded(
                     child: Center(
                       child: Text(
-                        "Notification settings",
+                        "اعدادات الاشعارات",
                       ),
                     ),
                   ),

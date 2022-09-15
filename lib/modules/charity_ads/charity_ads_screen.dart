@@ -14,9 +14,10 @@ class CharityAdsScreen extends StatelessWidget {
         padding: const EdgeInsets.all(30.0),
         child: SingleChildScrollView(
           child: Column(
+            textDirection: TextDirection.rtl,
             crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
-              const Text("Ad details",
+              const Text("تفاصيل الاعلان",
                 style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold
@@ -28,7 +29,7 @@ class CharityAdsScreen extends StatelessWidget {
                 height: 200,
                 width: 200,
               ),
-              const Text("Association name: Mongo",
+              const Text("اسم الجمعية: النور",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -37,17 +38,7 @@ class CharityAdsScreen extends StatelessWidget {
 
               const SizedBox(height: 8,),
 
-              const Text(  "Details: I need clothes",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-
-                ),
-              ),
-              const SizedBox(height: 8,),
-
-
-              const Text("Address: Deir Atiyah",
+              const Text("التفاصيل: احتياج لملابس",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -57,7 +48,17 @@ class CharityAdsScreen extends StatelessWidget {
               const SizedBox(height: 8,),
 
 
-              const Text("Number: 0987654321",
+              const Text("العنوان: دير عطية",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+
+                ),
+              ),
+              const SizedBox(height: 8,),
+
+
+              const Text("الرقم: 0987654321",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -68,7 +69,7 @@ class CharityAdsScreen extends StatelessWidget {
 
 
 
-              const Text('Working: hours: 8-3',
+              const Text('ساعات العمل: 8-3',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -78,7 +79,7 @@ class CharityAdsScreen extends StatelessWidget {
               const SizedBox(height: 8,),
 
 
-              const Text('Opening days: Sunday',
+              const Text('ايام الافتتاح: الاحد-الاثنين',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -87,7 +88,7 @@ class CharityAdsScreen extends StatelessWidget {
               ),
               const SizedBox(height: 55,),
 
-              defaultButton(text: 'Donation', function: () {  }
+              defaultButton(text: 'التبرع', function: () {  }
 
               ),
 
